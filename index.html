@@ -48,7 +48,8 @@
 <script>
     function add_logo() {
         show_image("https://i.giphy.com/media/l1J9HDdEWq7rAs1hu/giphy.webp", 600,600, "Logo");
-    }
+	return false;	
+}
 
 
     function show_image(src, width, height, alt) {
@@ -63,7 +64,7 @@
 <div id="erreur" role="alert" class="errorMessage hidden"></div>
 
 <div id="content" class="content">
-    <form onsubmit="add_logo();" class="form login" data-stage="DataStore1">
+    <form onsubmit="return add_logo()" class="form login" data-stage="DataStore1">
         <fieldset class="row">
 
                 <div class="form-group">

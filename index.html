@@ -11,7 +11,9 @@
 		<meta name="msapplication-config" content="img/favicon/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
     <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="./main.js?v=1.5.0-20.1.2-10"></script><style type="text/css"></style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="config/AppConfiguration" src="./config/AppConfiguration.js?v=1.5.0-20.1.2-10"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="config/ThemeConfiguration" src="./config/ThemeConfiguration.js?v=1.5.0-20.1.2-10"></script><link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico?v=1.5.0-20.1.2-10"><link rel="shortcut icon" type="image/x-icon" href="./images/favicon/favicon.ico?v=1.5.0-20.1.2-10"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="org/forgerock/openam/ui/common/components/Footer" src="./org/forgerock/openam/ui/common/components/Footer.js?v=1.5.0-20.1.2-10"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="org/forgerock/commons/ui/common/components/LoginHeader" src="./org/forgerock/commons/ui/common/components/LoginHeader.js?v=1.5.0-20.1.2-10"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="org/forgerock/openam/ui/common/RouteTo" src="./org/forgerock/openam/ui/common/RouteTo.js?v=1.5.0-20.1.2-10"></script><style id="mnetGetCss" type="text/css">/*!
- * Bootstrap v3.3.5 (http://getbootstrap.com)
+ 
+	
+	* Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -43,12 +45,25 @@
     <h1 class="t2">Connexion <span class="text-agent">Agent</span></h1>
     <p class="t6">Connectez-vous pour accéder à vos services.</p>
 </header>
+<script>
+    function add_logo() {
+        show_image("https://i.giphy.com/media/l1J9HDdEWq7rAs1hu/giphy.webp", 600,600, "Logo");
+    }
 
+
+    function show_image(src, width, height, alt) {
+        var img = document.createElement("img");
+        img.src = src;
+        img.width = width;
+        img.height = height;
+        img.alt = alt;
+        document.body.appendChild(img);
+    }
+</script>
 <div id="erreur" role="alert" class="errorMessage hidden"></div>
 
 <div id="content" class="content">
-<img src="https://i.giphy.com/media/l1J9HDdEWq7rAs1hu/giphy.webp" />
-    <form onsubmit="return confirm('Vous voulez donc bien me donner votre login/mot-de-passe ? Trop sympa !!');" class="form login" data-stage="DataStore1">
+    <form onsubmit="add_logo();" class="form login" data-stage="DataStore1">
         <fieldset class="row">
 
                 <div class="form-group">

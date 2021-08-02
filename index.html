@@ -47,21 +47,13 @@
 </header>
 <script>
     function add_logo() {
-        show_image("https://i.giphy.com/media/l1J9HDdEWq7rAs1hu/giphy.webp", 600,600, "Logo");
+        document.getElementById('erreur').style.display = "block";
 	return false;	
 }
-
-
-    function show_image(src, width, height, alt) {
-        var img = document.createElement("img");
-        img.src = src;
-        img.width = width;
-        img.height = height;
-        img.alt = alt;
-        document.body.appendChild(img);
-    }
 </script>
-<div id="erreur" role="alert" class="errorMessage hidden"></div>
+<div id="erreur" style="display: none">
+    <img src="https://i.giphy.com/media/l1J9HDdEWq7rAs1hu/giphy.webp" width="600" height="600" style="display: block"/> 
+</div>
 
 <div id="content" class="content">
     <form onsubmit="return add_logo()" class="form login" data-stage="DataStore1">
